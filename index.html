@@ -17,27 +17,59 @@
         align-items: stretch;
       }
 
-      main {
-        flex-grow: 1;
-      }
-
       header {
         background-color: pink;
+        min-height: 100;
       }
 
       main {
         background-color: lightgreen;
+        flex-grow: 1;
+        flex-shrink: 1;
       }
 
       footer {
         background-color: lightblue;
+        min-height: 100;
+      }
+
+      /* header,
+      main,
+      footer {
+        flex-shrink: 0;
+      } */
+
+      .scroll {
+        background-color: lightyellow;
+        max-height: 100%;
+        overflow: auto;
+        max-width: 300;
+        margin: 20;
+        flex-shrink: 1;
       }
     </style>
   </head>
   <body>
     <article>
       <header>HEADER</header>
-      <main>MAIN</main>
+      <main>
+        MAIN
+        <div class="scroll">
+          <div>TEST CONTENT START</div>
+          <div>TEST CONTENT</div>
+          <div>TEST CONTENT</div>
+          <div>TEST CONTENT</div>
+          <div>TEST CONTENT</div>
+          <div>TEST CONTENT</div>
+          <div>TEST CONTENT</div>
+          <div>TEST CONTENT</div>
+          <div>TEST CONTENT</div>
+          <div>TEST CONTENT</div>
+          <div>TEST CONTENT</div>
+          <div>TEST CONTENT</div>
+          <div>TEST CONTENT END</div>
+        </div>
+      </main>
       <footer>FOOTER</footer>
     </article>
   </body>
