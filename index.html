@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <!-- https://dev.to/domysee/keeping-the-footer-at-the-bottom-with-css-flexbox-5h5f -->
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      article {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      main {
+        flex-grow: 1;
+      }
+
+      header {
+        background-color: pink;
+      }
+
+      main {
+        background-color: lightgreen;
+      }
+
+      footer {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <header>HEADER</header>
+      <main>MAIN</main>
+      <footer>FOOTER</footer>
+    </article>
+  </body>
+</html>
