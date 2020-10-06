@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <style>
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .outer {
+        display: flex;
+        justify-content: center;
+
+        /* REQUIRED: causes this container to grow the max height of the inner container */
+        height: 100%;
+      }
+
+      .inner {
+        display: flex;
+        margin: 20px;
+        padding: 20px;
+
+        /* show you can limit the height if you wanted to */
+        max-height: 500px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightblue;
+        min-width: 300px;
+        padding: 50px;
+
+        /* always show the Y scrollbar to prevent side-shift on scroll */
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner">
+        <div class="content">
+          <div>START</div>
+          <div>CONTENT</div>
+          <div>CONTENT</div>
+          <div>CONTENT</div>
+          <div>CONTENT</div>
+          <div>CONTENT</div>
+          <div>CONTENT</div>
+          <div>CONTENT</div>
+          <div>CONTENT</div>
+          <div>CONTENT</div>
+          <div>CONTENT</div>
+          <div>CONTENT</div>
+          <div>CONTENT</div>
+          <div>CONTENT</div>
+          <div>END</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
