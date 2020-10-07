@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <style>
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .outer {
+        display: flex;
+        justify-content: center;
+        background-color: lightgray;
+
+        /* REQUIRED: causes this container to grow the max height of the inner container */
+        height: 100%;
+      }
+
+      .inner {
+        display: flex;
+        margin: 20px;
+        padding: 20px;
+        background-color: blueviolet;
+
+        /* show you can limit the height if you wanted to */
+        max-height: 500px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightblue;
+        min-width: 300px;
+        padding: 50px;
+
+        /* always show the Y scrollbar to prevent side-shift on scroll */
+        /* overflow-y: scroll; */
+      }
+
+      /* Content Header and Panels */
+      .header {
+        display: flex;
+        flex: 1;
+        background-color: lightgreen;
+        margin: 10px;
+        padding: 10px;
+
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+      }
+
+      .panels {
+        display: flex;
+        flex: 1;
+        /* background-color: lightpink; */
+        width: 100%;
+
+        /* This height causes both inner panels to flex with the browser (viewport) */
+        height: 100%;
+      }
+
+      .left {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        background-color: lavender;
+        margin: 10px;
+        padding: 10px;
+        overflow-y: scroll;
+
+        /* Margin from the bottom of the viewport, *not* the parent container */
+        margin-bottom: 50px;
+      }
+
+      .main {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        background-color: lightcyan;
+        margin: 10px;
+        padding: 10px;
+        overflow-y: scroll;
+
+        /* Margin from the bottom of the viewport, *not* the parent container */
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      OUTER
+      <div class="inner">
+        INNER
+        <div class="content">
+          CONTENT
+          <div class="header">HEADER</div>
+          <div class="panels">
+            PANELS
+            <div class="left">
+              <div>LEFT PANEL START</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>END</div>
+            </div>
+            <div class="main">
+              <div>MAIN PANEL START</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>CONTENT</div>
+              <div>END</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
