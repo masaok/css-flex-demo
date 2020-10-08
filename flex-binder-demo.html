@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <style>
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        /* display:block by default */
+        /* display:flex or display:block both work here */
+      }
+
+      /* Container for both panels */
+      .content-root {
+        display: inline-flex;
+        min-width: 100%;
+        min-height: 100vh;
+        background-color: #e8eeed;
+      }
+
+      .outer {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      /* Only the left menu */
+      .menubar {
+        background-color: lightgreen;
+      }
+
+      /* Right side grid container */
+      .grid {
+        display: grid;
+        width: 100%;
+      }
+
+      .header {
+        display: flex;
+        flex: 1;
+        background-color: lightpink;
+
+        /* Hardcoding header height is required (for now) */
+        min-height: 100px;
+        max-height: 100px;
+      }
+
+      .content-main {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+      }
+
+      .doc-collection-root {
+        display: flex;
+        flex: 1;
+
+        /* NOTE: this class is direction:row *and* height:100vh - header height */
+        height: calc(100vh - 100px);
+      }
+
+      .panels {
+        display: flex;
+        flex: 1;
+        background-color: lavender;
+      }
+
+      .left-panel {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        background-color: lightslategray;
+      }
+
+      .list {
+        /* display: block; */
+        display: flex;
+        flex-direction: column;
+        /* flex: 1 1 1px; */
+        flex: 1;
+        background-color: lightcyan;
+        margin: 20px;
+
+        /* flex: 1 1 1px; */
+        overflow-y: auto;
+
+        /* This hardcoded max height causes the content to scroll correctly */
+        /* max-height: 150px; */
+      }
+
+      .right-panel {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        background-color: lightblue;
+
+        height: 100%;
+      }
+
+      .main-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        background-color: lightgoldenrodyellow;
+        margin: 20px;
+
+        /* height: 100%; */
+        height: 100vh;
+        overflow-y: auto;
+
+        /* This hardcoded max height causes the content to scroll correctly */
+        /* max-height: 200px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content-root">
+      <nav class="menubar">LEFT MENU BAR</nav>
+      <div class="grid">
+        <div class="header">HEADER</div>
+        <div class="content-main">
+          <div class="doc-collection-root">
+            <div class="panels">
+              <div class="left-panel">
+                <div class="list">
+                  <div>LEFT PANEL LIST START</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>END</div>
+                </div>
+              </div>
+              <div class="right-panel">
+                <div class="main-content">
+                  <div>RIGHT PANEL MAIN CONTENT START</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>CONTENT</div>
+                  <div>END</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
