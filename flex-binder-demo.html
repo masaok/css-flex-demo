@@ -14,7 +14,9 @@
 
       /* Container for both panels */
       .content-root {
-        display: inline-flex;
+        display: flex;
+        /* no difference with inline-flex */
+        /* display: inline-flex; */
         min-width: 100%;
         min-height: 100vh;
         background-color: #e8eeed;
@@ -32,8 +34,9 @@
       }
 
       /* Right side grid container */
-      .grid {
-        display: grid;
+      .main {
+        /* Grid was not necessary here to achieve 100% width */
+        /* display: grid; */
         width: 100%;
       }
 
@@ -53,18 +56,14 @@
         flex-direction: column;
       }
 
+      /* Panels a.k.a. Doc Collection Root */
       .doc-collection-root {
         display: flex;
         flex: 1;
+        background-color: lightslategray;
 
         /* NOTE: this class is direction:row *and* height:100vh - header height */
         height: calc(100vh - 100px);
-      }
-
-      .panels {
-        display: flex;
-        flex: 1;
-        background-color: lavender;
       }
 
       .left-panel {
@@ -72,22 +71,17 @@
         flex: 1;
         flex-direction: column;
         background-color: lightslategray;
+        height: 100%;
       }
 
       .list {
-        /* display: block; */
         display: flex;
         flex-direction: column;
-        /* flex: 1 1 1px; */
         flex: 1;
         background-color: lightcyan;
         margin: 20px;
 
-        /* flex: 1 1 1px; */
         overflow-y: auto;
-
-        /* This hardcoded max height causes the content to scroll correctly */
-        /* max-height: 150px; */
       }
 
       .right-panel {
@@ -106,55 +100,48 @@
         background-color: lightgoldenrodyellow;
         margin: 20px;
 
-        /* height: 100%; */
-        height: 100vh;
         overflow-y: auto;
-
-        /* This hardcoded max height causes the content to scroll correctly */
-        /* max-height: 200px; */
       }
     </style>
   </head>
   <body>
     <div class="content-root">
       <nav class="menubar">LEFT MENU BAR</nav>
-      <div class="grid">
+      <div class="main">
         <div class="header">HEADER</div>
         <div class="content-main">
           <div class="doc-collection-root">
-            <div class="panels">
-              <div class="left-panel">
-                <div class="list">
-                  <div>LEFT PANEL LIST START</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>END</div>
-                </div>
+            <div class="left-panel">
+              <div class="list">
+                <div>LEFT PANEL LIST START</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>END</div>
               </div>
-              <div class="right-panel">
-                <div class="main-content">
-                  <div>RIGHT PANEL MAIN CONTENT START</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>CONTENT</div>
-                  <div>END</div>
-                </div>
+            </div>
+            <div class="right-panel">
+              <div class="main-content">
+                <div>RIGHT PANEL MAIN CONTENT START</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>CONTENT</div>
+                <div>END</div>
               </div>
             </div>
           </div>
