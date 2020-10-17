@@ -22,12 +22,6 @@
         background-color: #e8eeed;
       }
 
-      .outer {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-      }
-
       /* Only the left menu */
       .menubar {
         background-color: lightgreen;
@@ -35,6 +29,9 @@
 
       /* Right side grid container */
       .main {
+        /* Display Flex or Block works here */
+        display: flex;
+        flex-direction: column;
         /* Grid was not necessary here to achieve 100% width */
         /* display: grid; */
         width: 100%;
