@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <!-- Credit to this StackOverflow: -->
+    <!-- https://stackoverflow.com/questions/43352501/css-grid-content-to-use-free-space-but-scroll-when-bigger -->
+    <style>
+      .container {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 1fr 1fr;
+        height: 100%;
+      }
+
+      .container > div {
+        border: 1px solid blue;
+        border-radius: 5px;
+      }
+
+      .left {
+        grid-column: 1;
+        grid-row: 1/4;
+      }
+
+      .header {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      .problem-child {
+        grid-column: 2;
+        grid-row: 2;
+        position: relative;
+        min-height: 4em;
+      }
+
+      .problem-child > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        overflow: auto;
+      }
+
+      .footer {
+        grid-column: 2;
+        grid-row: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        left<br />I don't want this one to scroll<br />this should<br />determine<br />the
+        height of the whole grid container
+      </div>
+      <div class="header">column header</div>
+      <div class="problem-child">
+        <div>
+          problem child:<br />I<br />want<br />this<br />to<br />scroll<br />rather<br />than<br />making<br />everything<br />tall
+        </div>
+      </div>
+      <div class="footer">column footer</div>
+    </div>
+  </body>
+</html>
